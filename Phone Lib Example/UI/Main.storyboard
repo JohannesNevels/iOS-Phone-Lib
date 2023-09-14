@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n10-OO-7RU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n10-OO-7RU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -525,12 +525,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4ec-Tb-eiI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Dqm-1b-3En" kind="relationship" relationship="viewControllers" id="u6a-HV-UJB"/>
                         <segue destination="iji-v9-KEx" kind="relationship" relationship="viewControllers" id="M2Q-fe-1uW"/>
                         <segue destination="3Wi-C9-wNS" kind="presentation" identifier="LaunchCallSegue" id="0zK-Aw-DFA"/>
+                        <segue destination="vZe-z1-xCh" kind="relationship" relationship="viewControllers" id="Gvu-jU-yGV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQp-UJ-tFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -767,14 +769,55 @@
             </objects>
             <point key="canvasLocation" x="522" y="-1176"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="ado-hY-N95">
+            <objects>
+                <viewController title="Settings" id="On1-Wa-J80" customClass="SettingsViewController" customModule="Phone_Lib_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ci-4C-3pI"/>
+                        <viewControllerLayoutGuide type="bottom" id="H7X-if-VWN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8iU-iY-G4W" customClass="SettingsViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="loA-PR-YEt">
+                        <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large" renderingMode="template"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t6-x9-JWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="95"/>
+        </scene>
+        <!--Logging-->
+        <scene sceneID="cPL-EK-fw3">
+            <objects>
+                <viewController id="vZe-z1-xCh" customClass="LogViewController" customModule="Phone_Lib_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HLe-f6-g0t"/>
+                        <viewControllerLayoutGuide type="bottom" id="STJ-4r-8gY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8eb-qn-gXs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logging" image="exclamationmark.triangle.fill" catalog="system" id="cdD-ah-Vcn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKn-E1-gcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="772"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0zK-Aw-DFA"/>
+        <segue reference="btu-K0-LAc"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
-        <image name="phone.down.fill" catalog="system" width="128" height="52"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="102"/>
+        <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="109"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="phone.down.fill" catalog="system" width="128" height="55"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -795,7 +838,7 @@
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

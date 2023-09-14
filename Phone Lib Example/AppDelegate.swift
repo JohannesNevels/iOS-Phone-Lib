@@ -82,8 +82,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LogDelegate {
         defaults.object(forKey: key) as? String ?? ""
     } //TODO: move this outside ViewControllers
     
+    private func saveLog(message:String, level: LogLevel) {
+        // Check if array is existing
+        guard var logsList = defaults.array(forKey: "logs") as? [String] else {
+            defaults.setValue([message], forKey: "logs")
+            return
+        }
+        // Append if logs already exist
+        logsList.append(message)
+        defaults.setValue(logsList, forKey: "logs")
+    }
+    
+    
     func onLogReceived(message: String, level: LogLevel) {
-        print("\(String(describing: level)) \(message)")
+        print("LOG: \(String(describing: level)) \(message)")
+        saveLog(message: message, level: level)
     }
 }
-

@@ -15,6 +15,7 @@ target 'Phone Lib Example' do
   pod 'SAMKeychain'
   pod 'QuickTableViewController'
   pod 'Alamofire', '~> 5.2'
+  pod 'SnapKit', '~> 5.0.0'
 end
 
 post_install do |installer|
